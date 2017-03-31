@@ -1,0 +1,244 @@
+import java.util.*;
+
+
+
+class  Customer
+{
+static String name, email, password, userID;
+public Customer()	//constructor
+{}
+public static void login()
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter
+else
+System.out.println("incorrect ID or password! please retry. \n new member?  register !");
+if(pass.equals(password))
+{System.out.println("Registration complete");
+System.out.println();
+System.out.println();}
+else
+{System.out.println("ReEnter password correctly!:");
+pass=sc.next();}
+}
+
+public static void giveSuggestion()	//Ready
+{
+Management mgmt=new Management();
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter your Suggestion:");
+String sugg=sc.next();
+mgmt.acceptSuggestions(sugg);
+}
+}
+
+
+
+class Buyer
+{
+int registerID;
+public Buyer()	//constructor
+{}
+public static void checkList()	//Ready
+{
+List li=new List();
+li.displayList();
+}
+
+
+public static void checkLoanOptions()
+public static void acceptSuggestions(String sugg)		//Ready
+{
+String s=sugg;
+System.out.println("Suggestion noted, Thank you for your feedback!");
+}
+}
+
+
+
+class List
+{
+String criteria;
+public List()	//constructor
+{}
+public static int selectCriteria()
+{
+Scanner sc=new Scanner(System.in);
+int cr=3;
+System.out.println("Select criteria:");
+System.out.println("1. To buy. \n 2. For rent. \n 3. All.");
+int chcr=sc.nextInt();
+switch(chcr)
+{
+case 1:
+{cr=1;
+break;}
+case 2:
+{cr=2;
+break;}
+case 3:
+{cr=3;
+break;}
+}
+return cr;
+}
+System.out.println("* Dadar(E)...3BHK on rent for more detail enter 25.");
+int propID=sc.nextInt();
+prop.getPropertyDetails(propID);
+}
+else if(cr==3)
+{
+System.out.println("* Andheri(W)-Shastri Nagar...4BHK for more detail enter 11.");
+System.out.println("* Mulund(E)-Mithagar Road... Recently renovated with plush modern for more detail enter 12.");
+System.out.println("* Vileparle(E) ...5BHK for more detail enter 13.");
+System.out.println("* Powai/Sakinaka...4BHK for mor detail enter 14.");
+System.out.println("* Kandivali...Good location for more detail enter 15.");
+System.out.println("* Vasai Road...3BHK on rent for more detail enter 21.");
+System.out.println("* Mulund(E)-V.P.Road... 2BHK on rent  for more detail enter 22.");
+System.out.println("* Thane(E) ...1BHK on rent for more detail enter 23.");
+System.out.println("* Bhandup(w)...2BHK on rent for more detail enter 24.");
+System.out.println("* Dadar(E)...3BHK on rent for more detail enter 25.");
+int propID=sc.nextInt();
+prop.getPropertyDetails(propID);
+Property prop=new Property();
+Management mgmt=new Management();
+List li=new List();
+
+
+int ch;
+Scanner sc=new Scanner(System.in);
+
+System.out.println("Welocome to ABHICHAR Property deals!!");
+do{
+System.out.println("Menu:");
+System.out.println("1.Login");
+System.out.println("2.Not a Member!.. Register");
+System.out.println("3.Propery List");
+System.out.println("4.Check Loan Options");
+System.out.println("5.Give suggestions");
+System.out.println("6.Exit");
+ch=sc.nextInt();
+	}
+public static void register()
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the emailed:");
+email=sc.next();
+System.out.println("Select the UserID:");
+userID=sc.next();
+System.out.println("Enter the password:");
+password=sc.next();
+System.out.println("ReEnter the password:");
+String pass=sc.next();
+
+
+	//ready
+{
+Management mgmt=new Management();
+mgmt.displayLoanOptions();
+}
+
+}
+
+
+
+class Management
+{
+int loanOptions;
+String specialOffers, suggestions;
+public Management()	//constructor
+{}
+public static void displayLoanOptions()
+{System.out.println();
+System.out.println("Loan options");
+System.out.println("Buying a flat? Floating home loan rate option ideal now \n Prospective home loan borrowers are in for lower home loan interest rates \n in the near to medium terms. \n The Reserve Bank of India (RBI) bringing down the repo rate \n and the cash reserve ratio (CRR) by 25 basis percentage points each signals\n  lower lending rates in the months ahead. \n This headline inflation rate too is coming down and this makes it possible\n for the RBI to take a softer stance on the Credit Policy .");
+System.out.println();
+System.out.println();
+System.out.println();
+}
+
+
+public static void displayList()
+{
+Property prop=new Property();
+Scanner sc=new Scanner(System.in);
+
+int cr=selectCriteria();
+if(cr==1)
+{
+System.out.println("* Andheri(W)-Shastri Nagar...4BHK for more detail enter 11.");
+System.out.println("* Mulund(E)-Mithagar Road... Recently renovated with plush modern for more detail enter 12.");
+System.out.println("* Vileparle(E) ...5BHK for more detail enter 13.");
+System.out.println("* Powai/Sakinaka...4BHK for more detail enter 14.");
+System.out.println("* Kandivali...Good location for more detail enter 15.");
+int propID=sc.nextInt();
+prop.getPropertyDetails(propID);
+}
+else if(cr==2)
+{
+System.out.println("* Vasai Road...3BHK on rent for more detail enter 21.");
+System.out.println("* Mulund(E)-V.P.Road... 2BHK on rent  for more detail enter 22.");
+System.out.println("* Thane(E) ...1BHK on rent for more detail enter 23.");
+System.out.println("* Bhandup(w)...2BHK on rent for more detail enter 24.");
+
+
+}
+
+
+}
+
+}
+
+
+
+class Property
+{
+String name, location, ownerName, status, type;
+int price, propertyID;
+public Property()
+{}
+
+public static void getPropertyDetails(int propID)
+{
+int id=propID;
+System.out.println();
+System.out.println("Details not available for property with ID "+id);
+System.out.println();
+System.out.println();
+}
+
+}
+
+
+
+
+
+class PropertyMgmtSyst
+{
+public static void main(String args[])
+{
+Customer cust=new Customer();
+Buyer buy=new Buyer();
+switch(ch)
+{
+case 1:
+{cust.login();
+break;}
+case 2:
+{cust.register();
+break;}
+case 3:
+{buy.checkList();
+break;}
+case 4:
+{buy.checkLoanOptions();
+break;}
+case 5:
+{cust.giveSuggestion();
+break;}
+case 6:
+break;
+}
+}while(ch!=6);
+}
+}
